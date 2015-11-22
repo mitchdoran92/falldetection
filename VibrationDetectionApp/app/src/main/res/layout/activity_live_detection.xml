@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.mitch.vibrationdetection.LiveDetection"
+
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <TextView android:text="Live Fall Detection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_Title"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:text="Noise cutoff scale:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/TV_NoiseLevel"
+        android:textSize="16sp"
+
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/TV_Title"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/ET_NoiseLevel"
+        android:inputType="numberDecimal"
+
+        android:textSize="14sp"
+        android:hint="Suggested values between 2 and 3.5"
+
+        android:layout_below="@id/TV_NoiseLevel"
+        />
+
+    <TextView
+        android:text="Fall threshold:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/TV_FallThreshold"
+        android:textSize="16sp"
+
+
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ET_NoiseLevel"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/ET_FallThresh"
+        android:inputType="numberDecimal"
+
+        android:textSize="14sp"
+        android:hint="Suggested values 1 to 3 higher than Noise level"
+
+        android:layout_below="@id/TV_FallThreshold"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/BUT_Sensing"
+        android:onClick="SensingOnClick"
+
+        android:text="Start Sensing"
+
+        android:layout_alignParentBottom="true"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/BUT_SaveData"
+        android:onClick="SaveOnClick"
+
+        android:text="Potential Fall Detected. Save Data"
+
+        android:visibility="invisible"
+        android:layout_above="@id/BUT_Sensing"
+        />
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/XYPlot_VectorMagnitude"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:layout_below="@id/ET_FallThresh"
+        android:layout_above="@id/BUT_SaveData"
+
+        androidPlot.title="A Simple XY Plot"
+        androidPlot.domainLabel="Domain"
+        androidPlot.rangeLabel="Range"
+
+
+        />
+
+
+
+
+
+
+
+</RelativeLayout>

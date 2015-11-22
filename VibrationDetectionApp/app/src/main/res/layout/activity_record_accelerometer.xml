@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.mitch.vibrationdetection.RecordAccelerometer">
+
+    <TextView android:text="Make a new recording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_title"
+        android:textSize="24sp"
+
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/ET_RecordingName"
+        android:hint="Recording name"
+        android:inputType="text"
+
+        android:layout_below="@id/TV_title"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/ET_Distance"
+        android:hint="Distance from device"
+        android:inputType="text"
+
+        android:layout_below="@id/ET_RecordingName"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/ET_Height"
+        android:hint="Height above floor"
+        android:inputType="text"
+
+        android:layout_below="@id/ET_Distance"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/ET_ThreshScale"
+        android:hint="Threshold Scale x * avgThresh"
+        android:inputType="numberDecimal"
+
+        android:layout_below="@id/ET_Height"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/TV_ThreshScale"
+        android:text="Current ThreshScale: "
+        android:textSize="24sp"
+
+        android:layout_below="@id/ET_ThreshScale"
+        />
+
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:text="X Axis: "
+        android:id="@+id/TV_XAxis"
+
+        android:layout_below="@id/BUT_Record"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Y Axis: "
+        android:id="@+id/TV_YAxis"
+
+        android:layout_below="@id/TV_XAxis"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Z Axis: "
+        android:id="@+id/TV_ZAxis"
+
+        android:layout_below="@id/TV_YAxis"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Begin Recording"
+        android:id="@+id/BUT_Record"
+        android:onClick="RecordOnClick"
+
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
