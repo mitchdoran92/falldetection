@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">VibrationDetection</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_record_accelerometer">RecordAccelerometer</string>
-    <string name="title_activity_view_recordings">ViewRecordings</string>
-    <string name="title_activity_live_detection">LiveDetection</string>
-</resources>
